@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <title>Basic 88</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/layout.css" type="text/css">
+  <!--[if lt IE 9]><script src="scripts/html5shiv.js"></script><![endif]-->
+  <script src="dynamicdata.js"></script>
+</head>
+
+<body>
+  <div class="wrapper row1">
+    <header id="header" class="clear">
+      <h3 id="mytime" style="text-align: center">7:48AM</h3>
+      <div id="hgroup">
+        <h1>
+          <a href="#">Basic 88</a>
+        </h1>
+        <h2>Free HTML5 Website Template</h2>
+      </div>
+      <nav>
+        <ul id="nav" onload="shownav()">
+
+        </ul>
+      </nav>
+    </header>
+  </div>
+  <!-- content -->
+  <div class="wrapper row2">
+    <div id="container" class="clear">
+      <!-- Slider -->
+      <section id="slider">
+        <a href="#">
+          <img src="https://i.ytimg.com/vi/gD4uACwPChA/maxresdefault.jpg" alt="Circle" id="circle" width="100%" height="360px">
+        </a>
+      </section>
+      <!-- main content -->
+      <div id="homepage">
+        <!-- Services -->
+        <section id="services" class="clear">
+
+        </section>
+        <!-- / Services -->
+        <!-- ########################################################################################## -->
+        <!-- ########################################################################################## -->
+        <!-- ########################################################################################## -->
+        <!-- ########################################################################################## -->
+        <!-- Introduction -->
+        <section id="intro" class="last clear">
+          <article>
+            <figure id="lastimg">
+              <img id="lastimage" width="450" height="250" alt="">
+              <figcaption id="last">
+                <h2 id="head2"></h2>
+                <p id="head2p1"></p>
+                <footer class="more">
+                  <a href="#">Read More &raquo;</a>
+                </footer>
+              </figcaption>
+            </figure>
+          </article>
+        </section>
+        <!-- / Introduction -->
+      </div>
+      <!-- / content body -->
+    </div>
+  </div>
+  <!-- Footer -->
+  <div class="wrapper row3">
+    <div id="footer" class="clear">
+      <!-- Section One -->
+      <section class="one_quarter">
+        <h2 class="title">Link Block</h2>
+        <nav>
+          <ul id="nav2">
+
+          </ul>
+        </nav>
+      </section>
+      <!-- Section Two -->
+      <section class="one_quarter">
+        <h2 class="title">Link Block</h2>
+        <nav>
+          <ul id="nav3">
+
+          </ul>
+        </nav>
+      </section>
+      <!-- Section Three -->
+      <section class="one_quarter">
+        <h2 class="title">Link Block</h2>
+        <nav>
+          <ul id="nav4">
+
+        </nav>
+      </section>
+      <!-- Section Four -->
+      <section class="one_quarter lastbox">
+        <h2 class="title">Link Block</h2>
+        <nav>
+          <ul id="nav5">
+
+          </ul>
+        </nav>
+      </section>
+      <!-- / Section -->
+    </div>
+  </div>
+  <!-- Copyright -->
+  <div class="wrapper row4">
+    <footer id="copyright" class="clear">
+      <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved -
+        <a href="#">Domain Name</a>
+      </p>
+      <p class="fl_right">Template by
+        <a target="_blank" href="https://www.os-templates.com/" title="Free Website Templates">OS Templates</a>
+      </p>
+    </footer>
+  </div>
+  <script>
+    // Main Menu Nav Items
+    for (var i = 0; i < users.length; i++) {
+
+      var li = document.createElement('li')
+      var a = document.createElement('a')
+      a.setAttribute('href', "#")
+      a.innerHTML = users[i]
+      li.appendChild(a)
+      document.getElementById('nav').appendChild(li)
+
+    }
+
+    // Slider Area
+    var image = document.getElementById("circle");
+    var currentPos = 0;
+    var images = ["https://cdn.pixabay.com/photo/2018/05/28/22/11/message-in-a-bottle-3437294__340.jpg", "https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500", "sam2.jpg", "sam1.jpg", "sam3.jpg"]
+
+    function change() {
+      if (++currentPos >= images.length)
+        currentPos = 0;
+
+      image.src = images[currentPos];
+    }
+function startsliding(){
+  imgint=setInterval(change, 2000);
+}
+startsliding()
+   
+
+    for (var j = 0; j < datalinks.length; j++) {
+      var li = document.createElement('li')
+      var a = document.createElement('a')
+      a.setAttribute('href', "#")
+      a.innerHTML = datalinks[j]
+      li.appendChild(a)
+      document.getElementById('nav2').appendChild(li)
+    }
+    for (var j = 0; j < datalinks2.length; j++) {
+      var li = document.createElement('li')
+      var a = document.createElement('a')
+      a.setAttribute('href', "#")
+      a.innerHTML = datalinks2[j]
+      li.appendChild(a)
+      document.getElementById('nav3').appendChild(li)
+    }
+    for (var j = 0; j < datalinks3.length; j++) {
+      var li = document.createElement('li')
+      var a = document.createElement('a')
+      a.setAttribute('href', "#")
+      a.innerHTML = datalinks3[j]
+      li.appendChild(a)
+      document.getElementById('nav4').appendChild(li)
+    }
+    for (var j = 0; j < datalinks4.length; j++) {
+      var li = document.createElement('li')
+      var a = document.createElement('a')
+      a.setAttribute('href', "#")
+      a.innerHTML = datalinks4[j]
+      li.appendChild(a)
+      document.getElementById('nav5').appendChild(li)
+    }
+
+    document.getElementById('head2').innerHTML = "Indonectetus facilis leo nibh";
+    document.getElementById('head2p1').innerHTML = "This is a W3C compliant free website template from";
+    var j = document.createElement('a')
+    j.setAttribute('href', '#')
+    j.innerHTML = "OS Templates";
+    var k = document.getElementById('head2p1');
+    //k.appendChild('j');
+    //document.getElementById('last').appendChild('k')
+
+    var img = document.getElementById('lastimage');
+    img.src = "sam3.jpg";
+
+    function serverItem() {
+      var serviceList = [{ "image": "sam1.jpg", "header": "Indonectetus facilis", "desciption": "Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna." }, { "image": "sam2.jpg", "header": "Indonectetus facilis", "desciption": "Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna." }, { "image": "sam3.jpg", "header": "Indonectetus facilis", "desciption": "Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna." }]
+      for (j = 0; j < serviceList.length; j++) {
+        var div = document.createElement('div');
+        div.setAttribute('class', "one_third");
+
+        var imgElem1 = document.createElement('img');
+        imgElem1.setAttribute('src', serviceList[j].image);
+        imgElem1.setAttribute('width', "100%");
+        imgElem1.setAttribute('height', "180px");
+
+        var h2 = document.createElement('h2');
+        h2.innerHTML = serviceList[j].header
+
+        var p = document.createElement('p');
+        p.innerHTML = serviceList[j].desciption
+
+        var a = document.createElement('a');
+        a.setAttribute('href', '#')
+        a.setAttribute('id', 'middlea')
+        a.innerHTML = "Read more.....";
+
+        div.appendChild(imgElem1)
+        div.appendChild(h2)
+        div.appendChild(p)
+        div.appendChild(a)
+        console.log(div)
+        document.getElementById('services').appendChild(div)
+      }
+    }
+
+    serverItem()
+    //adding a event to stop interval
+    document.getElementById('circle').onmouseover=function(){
+ clearInterval(imgint)
+    }
+    document.getElementById('circle').onmouseout=function(){
+      startsliding()
+    }
+    //seting time
+    function showtime(){
+var presenttime=new Date()
+console.log(presenttime)
+document.getElementById('mytime').innerHTML=presenttime.toLocaleTimeString();
+    }
+    setInterval(function(){
+showtime()
+    },1000)
+
+  </script>
+</body>
+
+</html>
